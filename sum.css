@@ -24,6 +24,8 @@ font-size:18px;
 line-height: 30px;
 color: #000000;
 margin: 0;
+text-align: left;
+
 }
 p.informationpage {
 margin-left: auto;
@@ -87,6 +89,8 @@ padding-top: 75px;
 padding-bottom: 75px;
 background: #FFFFFF;
 color: rgba(0,0,0,0.3);
+text-align: center;
+
 }
 
 h1.informationpage {
@@ -105,7 +109,10 @@ padding-top: 50px;
 padding-bottom: 15px;
 margin: 0;
 color: rgba(0,0,0,0.3);
+text-align: center;
+
 }
+
 h2.informationpage {
 display: inline-block;
 max-width: 800px;
@@ -129,6 +136,8 @@ font-size:40px;
 padding-top: 0px;
 padding-bottom: 50px;
 color: rgba(0,0,0,0.95);
+text-align: center;
+
 }
 
 h4 {
@@ -141,6 +150,7 @@ line-height: 40px;
 margin:0;
 margin-bottom: 6.5px;
 padding:0;
+text-align: center;
 
 }
 
@@ -191,11 +201,11 @@ border-color: rgba(255,255,255,0.25);
 }
 
 
-/* 
+/*
 
 
 ul.bodytext {
- 
+
 
 margin: 0;
 margin-left: 12.5%;
@@ -292,29 +302,29 @@ color:#FF80AB;
 
 
 #primary1-full {
-  width:100%; 
+  width:100%;
   background-color: #C5CAE9;
   color: white;
   padding-bottom:0px;
   padding-top:0px;
   padding-left:0%;
-} 
+}
 
 #primary2-full {
-  width:100%; 
+  width:100%;
   background-color: #3F51B5;
   color: #FFFFFF;
   padding-bottom:0px;
   padding-top:0px;
   padding-left:0%;
   box-shadow:  0px 0px 12px  #888888;
-} 
+}
 
 
 
 
 #primary3-full {
-  width:100%; 
+  width:100%;
   background-color: #303F9F;
   color: white;
   padding-bottom:0px;
@@ -323,36 +333,36 @@ color:#FF80AB;
   box-shadow:  0px 0px 12px  #888888;
 
 
-} 
+}
 
 #accent1-full {
-  width:100%; 
+  width:100%;
   background-color: #FF80AB;
   color: white;
   padding-bottom:0px;
   padding-top:0px;
   padding-left:0px;
-} 
+}
 
 #accent2-full {
-  width:100%; 
+  width:100%;
   background-color: #F50057;
   color: white;
   padding-bottom:0px;
   padding-top:0px;
       padding-left:0px;
 
-} 
+}
 
 #background-full {
-  width:100%; 
+  width:100%;
   background-color: #FFFFFF;
   color: black;
   padding-bottom:0px;
   padding-top:0px;
       padding-left:0px;
 
-} 
+}
 
 
 
@@ -370,9 +380,9 @@ box-shadow:  0px 0px 3px  #888888;
 margin-left: 0;
 display: block;
 margin-left: 0;
-margin-right: 0; 
+margin-right: 0;
 
-    
+
 }
 
 
@@ -575,7 +585,7 @@ right: 0;
 margin-left:auto;
 margin-right:auto;
 background: rgba(0, 0, 0, 0.7);
-padding: 10px; 
+padding: 10px;
 
 }
 
@@ -594,29 +604,29 @@ padding:0px;
 }
 
 #blackbg-full {
-  width:100%; 
+  width:100%;
   background-color: black;
   padding:1px;
     box-shadow:  0px -1px 0px 0px #FFFFFF inset;
-}  
+}
 #color1-full {
-  width:100%; 
+  width:100%;
   background-color: #6290B2;
   box-shadow:  0px -1px 0px 0px #FFFFFF inset;
   color: white;
   padding-bottom: 80px;
   padding-top:0px;
-}  
+}
 #color1-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding:40px;
   background-color: #000000;
   box-shadow:  0px -35px 35px 35px #6290B2 inset;
 }
 #color2-full {
-  width:100%; 
+  width:100%;
   background-color: D8EEFE;
   color: 222222;
   box-shadow:  0px -1px 0px 0px #FFFFFF inset;
@@ -626,13 +636,13 @@ padding:0px;
 #color2-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding: 40px;
   background-color: #6B583B;
   box-shadow:  0px -35px 35px 35px #D8EEFE inset;
 }
 #color3-full {
-  width:100%; 
+  width:100%;
   background-color: 46677F;
      color: white;
        box-shadow:  0px -1px 0px 0px #FFFFFF inset;
@@ -642,13 +652,13 @@ padding:0px;
 #color3-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding: 40px;
   background-color: #638299;
   box-shadow:  0px -35px 35px 35px #46677F inset;
 }
 #color4-full {
-  width:100%; 
+  width:100%;
   background-color: A2B3BF;
      color: 222222;
        box-shadow:  0px -1px 0px 0px #FFFFFF inset;
@@ -658,13 +668,13 @@ padding:0px;
 #color4-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding:40px;
   background-color: #3D2D15;
   box-shadow:  0px -35px 35px 35px #A2B3BF inset;
 }
 #colorFooter-full {
-  width:100%; 
+  width:100%;
   background-color: 222222;
      color: white;
   padding-bottom: 100px;
@@ -673,14 +683,14 @@ padding:0px;
 #colorFooter-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding:40px;
   background-color: #A9A9A9;
   box-shadow:  0px -35px 35px 35px #222222 inset;
 }
 
 #colorWhite-full {
-  width:100%; 
+  width:100%;
   background-color: FFFFFF;
      color: black;
   padding-bottom: 100px;
@@ -689,7 +699,7 @@ padding:0px;
 #colorWhite-mid {
   margin-left:auto;
   margin-right:auto;
-  width:85%; 
+  width:85%;
   padding:40px;
   background-color: #A9A9A9;
   box-shadow:  0px -35px 35px 35px #FFFFFF inset;
