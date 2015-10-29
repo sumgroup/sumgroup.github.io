@@ -98,7 +98,10 @@
    </div>
 
     <div class="row">
-      <div class="col-md-0 col-md-offset-0">
+      <div class="col-md-6 col-md-offset-0">
+        <p>
+          ScreenLife is a multi-device personal tracking application. It enables users to collect and combine data from more than one device. For example ScreenLife can be used to track the use of a laptop, a mobile phone and a tablet. The ScreenLife system is composed of two components: a set of loggers that monitor and record when a device is in use, and an interface to provide users with a visual presentation of their screen time across multiple devices. We implemented ScreenLife loggers for four platforms: iOS, Android, Mac, and Windows (meaning it will work on iPhones, iPads, Android phones, Android tablets, Mac computers, and Windows computers). The visual interface is implemented in HTML5 and JavaScript and can be viewed in a browser on any platform.
+        </p>
       </div>
       <div class="col-md-3">
         <img src="img/screenlife-web.png" class="img-responsive" alt="ScreenLife Web">
@@ -141,8 +144,17 @@
 
 
     <div class="row">
-      <div class="col-md-0 col-md-offset-0">
+      <div class="col-md-6 col-md-offset-0">
+       <p>
+          Pass the Ball is a activity-tracker based team game in which only one team member can track their activity at any one time. When a user registers, they join a team. Each team has a virtual ball, which only one player on the team can have possession of at any one time. When a player receives the ball, the app starts tracking that player’s activity. After one hour, or if the player passes, it ceases tracking. The user with the ball can also pass the ball to any other user on their team.
 
+       </p>
+       <p>
+          Users can write comments in the app, which are visible to all other team members, appearing on the same timeline that shows passing and activity data. Players are able to view the activity of other teams, but cannot view comments made by other teams. Team activity is presented in the app on a scrollable timeline. The timeline is updated every time a comment is made, and every time the state of the ball changes (for example when a pass is made, when the tracker is turned on, or when an interception is possible). When a player turns on their tracker, a visualisation of their activity is displayed together with the points they have scored. The visualisations can be seen by all teams.
+       </p>
+       <p>
+          Pass The Ball was implemented as a hybrid mobile web app, meaning it is run as a native application but content is displayed using HTML5. As much as possible of the app is implemented as a web app hosted by our servers (meaning the interface was standard across devices). For Pass The Ball, counting and uploading steps is run natively as it needs to be run in the background—something that cannot be done for a pure web app. Delivery of push notifications also needed to be handled natively. Points are uploaded to the server every minute. We sought to create a feeling of ‘liveness’ in the app, whereby players could observe their teammates’ activities in near real-time. We also included icons in the league view to show which teams currently had a player ‘on the ball’ whose activity was being tracked.
+       </p>
       </div>
       <div class="col-md-3">
         <img src="img/passTheBall.png" class="img-responsive" alt="Pass the ball">
