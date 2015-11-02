@@ -68,56 +68,45 @@
 
     <h1>Tools and Infrastructure</h1>
 
-    The Tools and Infrastructure project is currently focusing on logging technology and modular software.
+    <p>
+      This project assembles and interconnects many of the technical parts that are collectively used in Experiences’ deployments. It creates interactions that help people handle the complexity of management, analysis and change in software and its use. It makes accessible the algorithmic advances of Inference Methods and Formal Analysis, and the conceptual advances of Conceptual Frameworks.
+    </p>
 
     <h2>Logging</h2>
-    <p>more info here soon...</a>
-
-<!--
 
     <p>
-      Prior to designing and developing adaptive and flexible systems for varying populations of users, it is vital that populations can be identified and understood. Today, software applications are used on a myriad of devices, and mobile systems play an increasing part of users’ digital lives. However, tracking activity on mobile devices remains difficult, and there are few applications or APIs to support detailed and persistent logging. Furthermore, the tools that do exist are relatively simple, and are unable to adapt to the many contexts each mobile device (and its user) may encounter throughout the day.
+      All our released apps are instrumented with logging code, to capture how users interact with the apps.  We have rebuilt our logging infrastructure to be more flexible, via a publish-subscribe architecture that allows multiple consumers of log data to work relatively independently—instead of the one monolithic service we previously relied on. A sketch of the components involved in the infrastructure is seen below.
     </p>
 
-    <p>
-      As part of the project we are working to create logging and tracking systems for both desktop and mobile systems. By tracking the same user as they move from one device to another we hope to gain a fuller picture than logging systems that focus on just one type of hardware. Essentially, we aim to identify, track and analyse a user’s digital day.
-    </p>
+   <img src=img/logging.png class="img-responsive" alt="logging structure">
 
     <p>
-      To date, we have created a unique tracking infrastructure that runs across desktop/laptop, tablet and smartphone devices. Objective-C has been our lead development platform, and so our system provides support for OS X and iOS devices. However, we plan to increase support for further devices, and work on Android tracking has progressed.
+     The logging infrastructure is built up of Docker containers. Docker containers are small Linux-containers that are most easily understood as lightweight virtual machines running on a host machine. Docker containers communicate through standard TCP/IP networking, a communications paradigm deeply integrated in Linux environments. Instead of raw socket communication, the infrastructure uses ZeroMQ, which abstracts asynchronous socket based data passing between machines and processes.
     </p>
 
+
+
+    <h2>Analysis Tools</h2>
     <p>
-      Our extensive past experience of trialling both desktop and mobile systems—and our more recent experience within Populations—has identified a pressing need for any logging or tracking system to be extremely flexible. Our tracking infrastructure is designed to be extremely flexible and adaptive; responding to changes in user and device context. For example, whilst most logging systems provide a static, preset rate of logging, ours is able to ramp up logging rates, and add new types of logging, during key periods or when requested remotely.
+      We have developed Blocks, a meta-tool for creating exploratory data analysis tools that allow us to analyse app usage from app logs. It aims to allow for the integration of analysis methods and tools developed in the Inference Methods and Formal Analysis parts of the project, to make these tools available for developers and analysts who are not bona fide statisticians/formalists, and to allow for the implementation of visualisations on top of these statistical/formal tools. It further allows users of the resulting tools to do more interaction with the data than is typical in mainstream statistical/formal tools. This is thus different from creating reports from data. Rather the resulting tool provides a starting point for an ongoing analysis of the data, and allows the user not only to interact with the data and the analysis, but to extend the analysis and the visualisations thereof.
     </p>
 
     <p>
-      Currently, we are setting up a trial of our logging and tracking infrastructure in which we will monitor user activity as one moves from one device to another; building a record of the user’s digital day. A set
-      of App Tracker applications, one running on each device, will allow us to better understand when and why users move between laptops, tablets and phones, and what tasks they perform wholly or partly on each.
-    </p>
--->
-    <h2>Modular</h2>
-    <p>more info here soon...</a>
+      Blocks in its current form is a web application running in the browser. Users of Blocks write series of small snippets of code. These snippets of code can typically be of four types
 
-<!--
-    <p>
-      Modular software is crucial to supporting large and varying populations of users, as it allows flexibility, both in updating/replacing components, and in providing different software and workflow configurations to differing groups.
+   <ul>
+    <li>Data block: a block for getting data into the project (e.g. a MySQL statement for selecting rows in a table for analysis)
+    </li>
+    <li>Filter block: a block for filtering data based on input parameters or other collections of data (e.g. filter data on a set of users)
+    </li>
+    <li>Visualization block: for visualizing a collection of data (e.g. render bar chart)
+    </li>
+    <li>Analysis block: code that does analysis on the incoming data
+    </li>
+   </ul>
+
+    Blocks are generally written in JavaScript and run natively in the web browser. However, Blocks is intended to be easily extensible with existing tools and libraries written in other languages than JavaScript or runnable in a browser.  For instance data blocks can be written directly in MySQL to fetch data from a MySQL server. Certain analysis blocks are written in Python, PRISM, or even more specific programs such as Mallet—an implementation of Latent Dirichlet Allocation (LDA). This extensibility of Blocks lets us implement a bridge between other languages and the browser environment. Implementing this bridge can turn a machine learning library into an interactive component usable within Blocks to explore data.
     </p>
-    <p>
-      Designing and implementing a modular software infrastructure is a challenging task, particularly on mobile devices, and one that should not be undertaken in a way blind to the particular requirements of the Populations project.
-    </p>
-    <p>
-      In order to better understand these requirements such a modular infrastructure may be expected to fulfil, we have been creating and experimenting with real software deployments. Theory and practice in this area are wide-ranging but not straightforwardly consistent or prescriptive—mapping out these matters this is itself a topic of future work—and so we believe that by releasing and testing with actual large-scale software deployments we will be able to identify and address relevant issues more rapidly.
-    </p>
-    <p>
-      We have, thus far, created and released one piece of software, PostFactory, that utilises a modular infrastructure for iOS that we have designed and implemented, and are currently nearing completion of a second, Match FFIT. Our modular infrastructure provides a framework in which a developer can quickly create a software module that can be inserted into an existing user’s workflow. Modules in our framework know how to instantiate themselves, declare input requirements, and supply information about the outputs they provide. Modules also declare the types of data they accept and output, and this allows the user to configure module combinations that perform various operations on different types of data (text, audio,
-      images), or for the system to propose combinations of modules that work together. Our framework also includes a data bundle class that encapsulates a tuple-space that can be passed between modules. A formalised representation of such a bundle is important to allow data to flow between module combinations and for modules to perform operations on the data within. Modules are able to inspect data bundles and only operate on the data if appropriate, and gracefully handle operations on bundles where expected data may not be found, or other errors occur.
-    </p>
-    <p>
-      The mobile platform presents many implementation and distribution issues, as utilising truly dynamic code can be problematic due to restrictions both in mobile operating systems and those introduced by popular mobile distribution platforms, such as the Apple App Store, Android Market, or Windows Phone Store. For this reason, although we have implemented a system for loading and installing code modules dynamically at runtime, we currently design our systems to work through the introduction of additional or replacement software modules during app updates, when we take the opportunity to load a large static library of potential modules, rather than doing this in an ad hoc, piece-by-piece manner.
-    </p>
-    <hr>
--->
 
 
    </div> <!-- /container -->
