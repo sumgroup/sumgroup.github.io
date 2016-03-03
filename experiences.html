@@ -7,12 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Software Populations</title>
 
-    <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom    -->
 
-    <!-- Custom
     <link rel="stylesheet" type="text/css" href="sum.css">
-    -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,59 +23,73 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class = "header">
+      <div class="container">
+       <div class="container-fluid">
+         <h1>A populations approach to ubicomp systems design</h1>
 
-
-
-
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <a class="navbar-brand" href="index.html">Populations</a>
-
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-
-            <li><a href="about.html">About</a></li>
-
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="index.html">Home</a></li>
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Research <span class="caret"></span></a>
-               <ul class="dropdown-menu">
-                <li><a href="experiences.html">Experiences</a></li>
+               <ul role="presentation" class="dropdown-menu">
+                <li class="active"><a href="experiences.html">Experiences</a></li>
                 <li><a href="tools.html">Tools and Infrastructure</a></li>
                 <li><a href="inference.html">Inference</a></li>
                 <li><a href="concepts.html">Conceptual Framework</a></li>
                 <li><a href="formal.html">Formal Analysis</a></li>
                </ul>
             </li>
-            <li><a href="people.html">People</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li role="presentation"><a href="people.html">People</a></li>
+            <li role="presentation" ><a href="publications.html">Publications</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
+
+        </div>
+      </div>
+    </div>
+
+
 
     <!-- Main  -->
+    <div class="container">
+
+    <div class="container-fluid">
 
 
-    <h1>Experiences</h1>
+    <h2>Experiences</h2>
 
     <p>The Experiences project focuses on on large–scale deployment and iterative development of phone-based applications, in particular games and social networking applications, to combine and ground the work of other Populations projects. Such applications use our tools and infrastructure—elements of which make manifest the work of inference, formal modelling and conceptual work—to record and analyse data on the activity of users, evaluators and developers, offer control over the spread of data among users (e.g. teammates and opponents, and social networks) and researchers, and engender useful changes to system design and use. This project advances deployment methodology, e.g. setting small–scale user trials within large–scale ‘app store’ releases, to verify locally observed findings and explain patterns in globally collected data. To facilitate such large-scale deployments, and assist long-term impact of the research, it uses collaborations with industrial and institutional partners.</p>
 
-    <hr>
 
+    <div class="area">
 
      <div class="row">
        <div class="col-md-12 col-md-offset-0">
-         <h2>AppTracker</h2>
+         <h3>Quped</h3>
+       </div>
+     </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-0">
+          <p>
+            Quped is a pedometer based app for iPhone.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <img src="img/quped1.png" class="img-responsive" alt="Quped iPhone">
+        </div>
+        <div class="col-md-3">
+          <img src="img/quped2.png" class="img-responsive" alt="Quped iPhone 2">
+        </div>
+      </div>
+
+    </div> <!-- area -->
+
+    <div class="area">
+
+     <div class="row">
+       <div class="col-md-12 col-md-offset-0">
+         <h3>AppTracker</h3>
        </div>
      </div>
 
@@ -95,11 +109,13 @@
 
     </div>
 
-   <hr>
+  </div> <!-- area -->
+
+  <div class="area">
 
    <div class="row">
      <div class="col-md-12 col-md-offset-0">
-       <h2>ScreenLife</h2>
+       <h3>ScreenLife</h3>
      </div>
    </div>
 
@@ -117,11 +133,13 @@
       </div>
     </div>
 
-    <hr>
+  </div> <!-- area -->
+  <div class="area">
+
 
     <div class="row">
       <div class="col-md-12 col-md-offset-0">
-        <h2>MatchFIT</h2>
+        <h3>MatchFIT</h3>
       </div>
     </div>
 
@@ -140,11 +158,12 @@
       </div>
     </div>
 
-    <hr>
+  </div> <!-- area -->
+  <div class="area">
 
      <div class="row">
        <div class="col-md-12 col-md-offset-0">
-         <h2>Pass the Ball</h2>
+         <h3>Pass the Ball</h3>
        </div>
      </div>
 
@@ -170,12 +189,12 @@
       </div>
     </div>
 
-    <hr>
-
+  </div> <!-- area -->
+  <div class="area">
 
        <div class="row">
          <div class="col-md-12 col-md-offset-0">
-           <h2>Post Factory</h2>
+           <h3>Post Factory</h3>
          </div>
        </div>
 
@@ -195,11 +214,12 @@
       </div>
     </div>
 
-    <hr>
+  </div> <!-- area -->
+  <div class="area">
 
     <div class="row">
       <div class="col-md-12 col-md-offset-0">
-        <h2>Hungry Yoshi</h2>
+        <h3>Hungry Yoshi</h3>
       </div>
     </div>
 
@@ -215,10 +235,22 @@
 
     </div>
 
+  </div> <!-- area -->
 
-    <hr>
+  </div> <!-- /container -->
 
    </div> <!-- /container -->
+
+   <!-- footer -->
+    <div class = "footer">
+      <div class="container">
+        <div class="container-fluid">
+         <p><a class="primarylink" href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/J007617/1">EPSRC Reseach Programme Grant (EP/J007617/1)</a></p>
+         <img src="img/uni_glasgow_logo.png">
+         <img src="img/uni_warwick_logo.png">
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

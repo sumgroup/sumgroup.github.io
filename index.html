@@ -7,12 +7,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Software Populations</title>
 
-    <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom
+    <!-- Custom    -->
+
     <link rel="stylesheet" type="text/css" href="sum.css">
-    -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,33 +24,17 @@
   </head>
   <body>
 
-    <div class="container">
 
+    <div class = "header">
+      <div class="container">
+       <div class="container-fluid">
+         <h1>A populations approach to ubicomp systems design</h1>
 
-
-
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <a class="navbar-brand" href="index.html">Populations</a>
-
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-
-            <li><a href="about.html">About</a></li>
-
-
+          <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="index.html">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Research <span class="caret"></span></a>
-               <ul class="dropdown-menu">
+               <ul role="presentation" class="dropdown-menu">
                 <li><a href="experiences.html">Experiences</a></li>
                 <li><a href="tools.html">Tools and Infrastructure</a></li>
                 <li><a href="inference.html">Inference</a></li>
@@ -57,31 +42,55 @@
                 <li><a href="formal.html">Formal Analysis</a></li>
                </ul>
             </li>
-
-            <li><a href="people.html">People</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li role="presentation"><a href="people.html">People</a></li>
+            <li role="presentation" ><a href="publications.html">Publications</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
+
+        </div>
+      </div>
+    </div>
+
 
     <!-- Main  -->
+    <div class="container">
+
+    <div class="container-fluid">
 
 
 
 
-    <div class="jumbotron">
-       <h1>A populations approach to ubicomp systems design</h1>
-       <p class="lead">The Populations Programme is a five year research programme at the University of Glasgow and University of Warwick. It is funded by EPSRC (EP/J007617/1).</p><br>
-       <p><a class="btn btn-lg btn-success" href="about.html" role="button">About</a></p>
-     </div>
 
 
 
-      <hr>
 
+      <h2>The populations programme is a five year research programme working towards a new science of software structures. </h2>
+
+      <p>End-user adaptation of software structure offers a potentially major benefit: giving people the means to customise a program to suit individual needs, interests and contexts. However, in their different ways, users, analysts and developers are all challenged by complexities and costs when handling structural variation. Developers and analysts struggle to understand and work with what is happening in deployments. Each user is often unsupported in understanding what changes to software structure and its use might work well in terms of either objective functionality or subjective experience. </p>
+
+      <p>We are building tools and infrastructure that will let people in these roles handle such systems, understand relevant design niches and use contexts, and be more innovative. This work is woven together with advances in inference methods, formal models and conceptual frameworks. Collectively, this enables our large scale real-world deployments of software applications. These deployments serve both as useful everyday applications for large numbers of users and as testbeds for our new approach—user experiences that both ground and drive our technological, methodological and conceptual advances.</p>
+
+      <p>Treating a software class as a varied and changing population of software instances is the overarching concept that makes this work coherent and interconnected. Drawing metaphorically from biological concepts of species and evolution, the population concept is based on accepting—or even taking advantage of—the scale, variety and dynamism possible in contemporary software. </p>
+
+
+
+
+
+     </div> <!-- /container -->
 
    </div> <!-- /container -->
+
+    <!-- footer -->
+     <div class = "footer">
+       <div class="container">
+         <div class="container-fluid">
+          <p><a class="primarylink" href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/J007617/1">EPSRC Reseach Programme Grant (EP/J007617/1)</a></p>
+          <img src="img/uni_glasgow_logo.png">
+          <img src="img/uni_warwick_logo.png">
+
+
+         </div>
+       </div>
+     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -89,14 +98,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-63826995-2', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-63826995-2', 'auto');
+      ga('send', 'pageview');
     </script>
-
   </body>
 </html>

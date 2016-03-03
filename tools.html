@@ -7,12 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Software Populations</title>
 
-    <!-- Bootstrap -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Exo+2:300' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom    -->
 
-    <!-- Custom
     <link rel="stylesheet" type="text/css" href="sum.css">
-    -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,56 +23,47 @@
   </head>
   <body>
 
-    <div class="container">
+    <div class = "header">
+      <div class="container">
+       <div class="container-fluid">
+         <h1>A populations approach to ubicomp systems design</h1>
 
-
-
-
-    <!-- Static navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <a class="navbar-brand" href="index.html">Populations</a>
-
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-
-            <li><a href="about.html">About</a></li>
-
+          <ul class="nav nav-pills">
+            <li role="presentation"><a href="index.html">Home</a></li>
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Research <span class="caret"></span></a>
-               <ul class="dropdown-menu">
+               <ul role="presentation" class="dropdown-menu">
                 <li><a href="experiences.html">Experiences</a></li>
-                <li><a href="tools.html">Tools and Infrastructure</a></li>
+                <li class="active"><a href="tools.html">Tools and Infrastructure</a></li>
                 <li><a href="inference.html">Inference</a></li>
                 <li><a href="concepts.html">Conceptual Framework</a></li>
                 <li><a href="formal.html">Formal Analysis</a></li>
                </ul>
             </li>
-            <li><a href="people.html">People</a></li>
-            <li><a href="publications.html">Publications</a></li>
+            <li role="presentation"><a href="people.html">People</a></li>
+            <li role="presentation" ><a href="publications.html">Publications</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div><!--/.container-fluid -->
-    </nav>
+
+        </div>
+      </div>
+    </div>
 
     <!-- Main  -->
+    <div class="container">
+
+    <div class="container-fluid">
 
 
-    <h1>Tools and Infrastructure</h1>
+    <h2>Tools and Infrastructure</h2>
 
     <p>
       This project assembles and interconnects many of the technical parts that are collectively used in Experiences’ deployments. It creates interactions that help people handle the complexity of management, analysis and change in software and its use. It makes accessible the algorithmic advances of Inference Methods and Formal Analysis, and the conceptual advances of Conceptual Frameworks.
     </p>
 
-    <h2>Logging</h2>
+
+  <div class="area">
+
+    <h3>Logging</h3>
 
     <p>
       All our released apps are instrumented with logging code, to capture how users interact with the apps.  We have rebuilt our logging infrastructure to be more flexible, via a publish-subscribe architecture that allows multiple consumers of log data to work relatively independently—instead of the one monolithic service we previously relied on. A sketch of the components involved in the infrastructure is seen below.
@@ -84,16 +75,17 @@
      The logging infrastructure is built up of Docker containers. Docker containers are small Linux-containers that are most easily understood as lightweight virtual machines running on a host machine. Docker containers communicate through standard TCP/IP networking, a communications paradigm deeply integrated in Linux environments. Instead of raw socket communication, the infrastructure uses ZeroMQ, which abstracts asynchronous socket based data passing between machines and processes.
     </p>
 
+  </div> <!-- area -->
+  <div class="area">
 
-
-    <h2>Analysis Tools</h2>
+    <h3>Analysis Tools</h3>
     <p>
       We have developed Blocks, a meta-tool for creating exploratory data analysis tools that allow us to analyse app usage from app logs. It aims to allow for the integration of analysis methods and tools developed in the Inference Methods and Formal Analysis parts of the project, to make these tools available for developers and analysts who are not bona fide statisticians/formalists, and to allow for the implementation of visualisations on top of these statistical/formal tools. It further allows users of the resulting tools to do more interaction with the data than is typical in mainstream statistical/formal tools. This is thus different from creating reports from data. Rather the resulting tool provides a starting point for an ongoing analysis of the data, and allows the user not only to interact with the data and the analysis, but to extend the analysis and the visualisations thereof.
     </p>
 
     <p>
       Blocks in its current form is a web application running in the browser. Users of Blocks write series of small snippets of code. These snippets of code can typically be of four types
-
+    </p>
    <ul>
     <li>Data block: a block for getting data into the project (e.g. a MySQL statement for selecting rows in a table for analysis)
     </li>
@@ -105,11 +97,26 @@
     </li>
    </ul>
 
+   <p>
     Blocks are generally written in JavaScript and run natively in the web browser. However, Blocks is intended to be easily extensible with existing tools and libraries written in other languages than JavaScript or runnable in a browser.  For instance data blocks can be written directly in MySQL to fetch data from a MySQL server. Certain analysis blocks are written in Python, PRISM, or even more specific programs such as Mallet—an implementation of Latent Dirichlet Allocation (LDA). This extensibility of Blocks lets us implement a bridge between other languages and the browser environment. Implementing this bridge can turn a machine learning library into an interactive component usable within Blocks to explore data.
-    </p>
+   </p>
 
+ </div> <!-- area -->
 
-   </div> <!-- /container -->
+  </div> <!-- /container -->
+
+</div> <!-- /container -->
+
+<!-- footer -->
+ <div class = "footer">
+   <div class="container">
+     <div class="container-fluid">
+      <p><a class="primarylink" href="http://gow.epsrc.ac.uk/NGBOViewGrant.aspx?GrantRef=EP/J007617/1">EPSRC Reseach Programme Grant (EP/J007617/1)</a></p>
+      <img src="img/uni_glasgow_logo.png">
+      <img src="img/uni_warwick_logo.png">
+     </div>
+   </div>
+ </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
